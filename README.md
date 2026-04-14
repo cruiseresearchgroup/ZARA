@@ -1,47 +1,57 @@
-<h1 align="center"><strong> ZARA</strong></h1>
-<h1 align="center"><strong> 
-  Z̲ero-shot Motion Time-Series A̲nalysis via Knowledge and R̲etrieval Driven LLM A̲gents
+<h1 align="center"><strong>ZARA</strong></h1>
+<h1 align="center"><strong>
+  Training-Free Motion Time-Series Reasoning via Evidence-Grounded LLM Agents
 </strong></h1>
-  <p align="center">
-    <a href='https://scholar.google.com/citations?user=EVOzBF4AAAAJ&hl=en' target='_blank'>Zechen Li</a>&emsp;&emsp;
-    <a href='https://scholar.google.com/citations?user=haLBEWwAAAAJ&hl=en' target='_blank'>Baiyu Chen</a>&emsp;&emsp;
-    <a href='https://scholar.google.com/citations?user=KwhLl7IAAAAJ&hl' target='_blank'>Hao Xue</a>&emsp;&emsp;
-    <a href='https://fsalim.github.io' target='_blank'>Flora D. Salim</a>
-    <br><br>
-     University of New South Wales, Sydney<br/>
-    <br><br>
-    <a href="https://arxiv.org/abs/2508.04038">
-        <img src="https://img.shields.io/badge/arXiv-2503.07259-b31b1b.svg" alt="arXiv">
-    </a>
-  </p>
+<h3 align="center">
+  ACL 2026 Main Conference
+</h3>
+<p align="center">
+  <a href='https://zechenli03.github.io/zechen-homepage/' target='_blank'>Zechen Li</a>&emsp;&emsp;
+  <a href='https://scholar.google.com/citations?user=haLBEWwAAAAJ&hl=en' target='_blank'>Baiyu Chen</a>&emsp;&emsp;
+  <a href='https://scholar.google.com/citations?user=KwhLl7IAAAAJ&hl' target='_blank'>Hao Xue</a>&emsp;&emsp;
+  <a href='https://fsalim.github.io' target='_blank'>Flora D. Salim</a>
+  <br><br>
+  University of New South Wales, Sydney<br/>
+  <br><br>
+  <a href="https://arxiv.org/abs/2508.04038">
+    <img src="https://img.shields.io/badge/arXiv-2508.04038-b31b1b.svg" alt="arXiv">
+  </a>
+</p>
+
 
 ------
 📝 We are currently organizing the code and writing a detailed tutorial to help you build your own ZARA agent for human activity recognition. Stay tuned for updates!
 
+
 ## 🌟 Overview
 
-**ZARA** is the first zero-shot motion time-series analysis LLM agent that combines **domain knowledge**, **multi-sensor retrieval-augmented generation**, and **multi-agent reasoning** to classify motion sensor data for human activity recognation, achieving 2.53× F1 over baselines without fine-tuning or task-specific classifiers.
+**ZARA** (Z̲ero-training A̲ctivity R̲easoning A̲gents) is a **training-free, evidence-grounded LLM agent framework** for motion time-series reasoning. It combines **statistically grounded domain knowledge**, **multi-sensor retrieval-augmented evidence**, and **hierarchical multi-agent reasoning** to classify motion sensor data with transparent, human-readable rationales—without fine-tuning or task-specific classifiers.
+
 <div style="text-align: center;">
-    <img src="asset/ZARA.png" alt="zara" width=100% >
+  <img src="asset/ZARA.png" alt="zara" width=100% >
 </div>
+
 
 ### 🔑 Key Features
 
-- **Plug-and-Play Zero-Shot HAR**: ZARA leverages a knowledge-enhanced, evidence-extracting Large Language Models to achieve accurate and interpretable human activity recognition.
-- **Pairwise Knowledge Base**: Domain insights per activity pair.  
-- **Adaptive RAG**: Multi-sensor retrieval for motion time-series classification & rationale.  
-- **Classifier-Free Generalization**: 2.53× macro F1 gain over 10 baselines across 8 benchmarks, without requiring label-specific training.
+- **Training-Free HAR Inference**: ZARA performs human activity recognition without task-specific fine-tuning or classifier training, enabling plug-and-play deployment in parameter-frozen settings.
+- **Evidence-Grounded Reasoning**: Instead of relying on black-box projections, ZARA grounds LLM decisions in retrieved signal evidence and statistically derived feature priors.
+- **Pairwise Knowledge Base**: ZARA builds an activity-pair knowledge base that captures discriminative motion properties as interpretable linguistic priors.
+- **Multi-Sensor Retrieval**: Placement-specific retrieval and rank fusion provide class-balanced, query-relevant evidence across heterogeneous wearable sensors.
+- **Hierarchical Agentic Workflow**: Specialized agents perform feature selection, evidence pruning, and final decision reasoning to produce concise, evidence-backed rationales.
+- **Strong Generalization**: ZARA achieves state-of-the-art performance across 8 HAR benchmarks, with robust transfer across unseen subjects and heterogeneous sensor domains.
 
 ## 🌍 Citation
 
 If you find this repository useful for your research, please cite our paper:
 
 ```
-@article{li2025zarazeroshotmotiontimeseries,
-      title={ZARA: Zero-shot Motion Time-Series Analysis via Knowledge and Retrieval Driven LLM Agents}, 
-      author={Zechen Li and Baiyu Chen and Hao Xue and Flora D. Salim},
-      journal={arXiv preprint arXiv:2508.04038},
-      year={2025}
+@article{li2026zara,
+  title={ZARA: Training-Free Motion Time-Series Reasoning via Evidence-Grounded LLM Agents},
+  author={Zechen Li and Baiyu Chen and Hao Xue and Flora D. Salim},
+  journal={arXiv preprint arXiv:2508.04038},
+  year={2026},
+  url={https://arxiv.org/abs/2508.04038}
 }
 ```
 
