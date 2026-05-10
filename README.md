@@ -41,6 +41,26 @@
 - **Hierarchical Agentic Workflow**: Specialized agents perform feature selection, evidence pruning, and final decision reasoning to produce concise, evidence-backed rationales.
 - **Strong Generalization**: ZARA achieves state-of-the-art performance across 8 HAR benchmarks, with robust transfer across unseen subjects and heterogeneous sensor domains.
 
+## 🚀 Code Examples
+
+This release includes two end-to-end notebook examples:
+
+- `uci_notebook/uci_gemini.ipynb`: UCI HAR inference with a single retrieval index, illustrating the non-RRF retrieval setting.
+- `shoaib_notebook/shoaib_gemini.ipynb`: Shoaib HAR inference with placement-specific retrieval and reciprocal rank fusion (RRF).
+
+Before running the Gemini-based inference notebooks, set your API key as an environment variable:
+
+```bash
+export GOOGLE_API_KEY="your_api_key"
+```
+
+Each dataset directory also includes preprocessing and feature-importance notebooks. Run preprocessing first, then feature-importance generation, and finally the Gemini inference notebook for the corresponding dataset.
+
+> **Notice on feature-importance knowledge.**
+> The activity-pair knowledge base is constructed from AutoGluon feature importance and is used as a data-driven prior for ZARA. It should not be interpreted as an exhaustive list of all discriminative motion cues. Feature importance can be affected by the trained ensemble, validation split, feature correlation, and permutation behavior. As a result, some human-interpretable features may be under-ranked or omitted, especially when they are redundant with other features, useful only through interactions, or associated with rare motion patterns.
+>
+> Practical ways to improve or audit the knowledge base include: increasing `top_n` when constructing pairwise prompts; aggregating importance across multiple random seeds or folds; combining permutation importance with model-native importance and simple statistical effect sizes. These steps can make the knowledge base more robust without changing the overall ZARA inference pipeline.
+
 ## 🌍 Citation
 
 If you find this repository useful for your research, please cite our paper:
@@ -65,4 +85,3 @@ This work is under the <a rel="license" href="http://creativecommons.org/license
 ## 📩 Contact
 
 If you have any questions or suggestions, feel free to contact Zechen at `zechen.li(at)unsw(dot)edu(dot)au`.
-
