@@ -19,10 +19,6 @@
 </p>
 
 
-------
-📝 We are currently organizing the code and writing a detailed tutorial to help you build your own ZARA agent for human activity recognition. Stay tuned for updates!
-
-
 ## 🌟 Overview
 
 **ZARA** (Z̲ero-training A̲ctivity R̲easoning A̲gents) is a **training-free, evidence-grounded LLM agent framework** for motion time-series reasoning. It combines **statistically grounded domain knowledge**, **multi-sensor retrieval-augmented evidence**, and **hierarchical multi-agent reasoning** to classify motion sensor data with transparent, human-readable rationales—without fine-tuning or task-specific classifiers.
